@@ -1,0 +1,124 @@
+*, *:after, *:before {
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    font-size: 12px;
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFECB3;
+    height: 100%;
+  }
+  
+  .tier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Caveat Brush", cursive;
+    line-height: 200px;
+  }
+  
+  .tier-0 {
+    flex-direction: column;
+  }
+  
+  .tier-1 {
+    color: #FFAB40;
+  }
+  .tier-1 > .greeting-text {
+    filter: drop-shadow(5px 10px 4px #FFCA28);
+  }
+  
+  .tier-2 {
+    color: #EF5350;
+  }
+  .tier-2 > .tier-flower {
+    filter: drop-shadow(5px 10px 4px #F9A825);
+    animation: spin 5s linear infinite alternate;
+  }
+  .tier-2 > .greeting-text {
+    filter: drop-shadow(5px 10px 4px #D32F2F);
+  }
+  
+  .tier-3 {
+    color: #80CBC4;
+  }
+  .tier-3 > .greeting-text {
+    filter: drop-shadow(5px 10px 4px #4DB6AC);
+  }
+  
+  .tier-t-char {
+    position: relative;
+    padding: 0 30px;
+  }
+  .tier-t-char > .tier-whisk {
+    position: absolute;
+    transform: rotate3d(0, 0, 1, 135deg) translate3d(10px, 30px, 0);
+  }
+  .tier-t-char > .tier-spatula {
+    transform: rotate3d(0, 0, 1, 45deg) translate3d(-10px, 0, 0);
+  }
+  
+  .tier-m-char {
+    position: relative;
+  }
+  .tier-m-char > .caterpilar {
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
+  .tier-m-char > .caterpilar-1 {
+    position: absolute;
+    left: 0;
+    transform: rotate3d(0, 0, 1, 90deg) translate3d(0, 60%, 0);
+  }
+  .tier-m-char > .caterpilar-2 {
+    position: absolute;
+    left: 0;
+    transform: rotate3d(0, 0, 1, 90deg) translate3d(0, -60%, 0);
+  }
+  
+  .tier-arrow {
+    position: absolute;
+    top: 0;
+    transform: translate3d(320%, -50%, 0) rotate3d(0, 0, 1, 180deg);
+  }
+  
+  .tier-s-char {
+    padding: 0 100px;
+  }
+  
+  .greeting-text {
+    font-weight: 700;
+    font-size: 20rem;
+    text-transform: uppercase;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate3d(0, 0, 0, 0);
+    }
+    100% {
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
+  }
+  .tier-whisk {
+    position: absolute;
+  }
+  
+  @keyframes tier-2-shift {
+    0% {
+      color: #FF9800;
+    }
+    50% {
+      color: #FFD180;
+    }
+    100% {
+      color: #FFAB40;
+    }
+  }
+  
