@@ -21,7 +21,12 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Caveat Brush", cursive;
-  line-height: 200px;
+  line-height: 100px;
+}
+@media (min-width: 1200px) {
+  .tier {
+    line-height: 200px;
+  }
 }
 
 .tier-0 {
@@ -42,8 +47,6 @@ body {
 .tier-2 > .tier-flower {
   -webkit-filter: drop-shadow(5px 10px 4px #F9A825);
           filter: drop-shadow(5px 10px 4px #F9A825);
-  -webkit-animation: spin 5s linear infinite alternate;
-          animation: spin 5s linear infinite alternate;
 }
 .tier-2 > .greeting-text {
   -webkit-filter: drop-shadow(5px 10px 4px #D32F2F);
@@ -104,36 +107,50 @@ body {
 }
 
 .greeting-text {
+  font-size: 10rem;
   font-weight: 700;
-  font-size: 20rem;
   text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .greeting-text {
+    font-size: 20rem;
+  }
+}
+
+.flower {
+  height: 120px;
+  width: 120px;
+  -webkit-animation: spin 5s linear infinite alternate;
+          animation: spin 5s linear infinite alternate;
+}
+@media (min-width: 1200px) {
+  .flower {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 @-webkit-keyframes spin {
   0% {
-    -webkit-transform: rotate3d(0, 0, 0, 0);
-            transform: rotate3d(0, 0, 0, 0);
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
   }
   100% {
-    -webkit-transform: rotate3d(0, 0, 1, 360deg);
-            transform: rotate3d(0, 0, 1, 360deg);
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
   }
 }
 
 @keyframes spin {
   0% {
-    -webkit-transform: rotate3d(0, 0, 0, 0);
-            transform: rotate3d(0, 0, 0, 0);
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
   }
   100% {
-    -webkit-transform: rotate3d(0, 0, 1, 360deg);
-            transform: rotate3d(0, 0, 1, 360deg);
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
   }
 }
-.tier-whisk {
-  position: absolute;
-}
-
 @-webkit-keyframes tier-2-shift {
   0% {
     color: #FF9800;
@@ -145,7 +162,6 @@ body {
     color: #FFAB40;
   }
 }
-
 @keyframes tier-2-shift {
   0% {
     color: #FF9800;
